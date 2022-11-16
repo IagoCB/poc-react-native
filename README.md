@@ -31,7 +31,7 @@
 3. Utilizei o [Visual Studio Code](https://code.visualstudio.com/) mas também é possível utilizar outro editor de sua preferência, basta configurá-lo corretamente.
     
 ## 🧩 Como executar o aplicativo <a name="Como-executar-o-aplicativo"></a>
-1. Utilizando o terminal do Git Bash, clone o repositório em sua máquina através do seguinte comando:
+1. Clone o repositório em sua máquina através do seguinte comando:
     ```
     $ git clone https://github.com/IagoCB/poc-react-native.git
     ```
