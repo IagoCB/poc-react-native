@@ -33,7 +33,7 @@ const ClientUsers = {
 
     async deleteUser(data) {
         try {
-            const response = await client.delete(`${userPath}/${data.email}`);
+            const response = await client.delete(`${userPath}/${data.userEmail}`);
             return response;
         } catch (e) {
             return e;
