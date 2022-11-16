@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { Text } from "@rneui/base";
-import { Button, StyleSheet, TextInput, View } from "react-native";
+import { Button, Text } from "@rneui/base";
+import { StyleSheet, TextInput, View } from "react-native";
 
 import Client from '../services/user.js';
 
@@ -30,7 +30,7 @@ export default ({ route, navigation }) => {
 
     return (
         <View style={style.form}>
-            <Text>Nome</Text>
+            <Text style={style.text}>Nome</Text>
             <TextInput
                 style={style.input}
                 onChangeText={userName => setUser({ ...user, userName })}
@@ -38,7 +38,7 @@ export default ({ route, navigation }) => {
                 value={user.userName}
             />
 
-            <Text>E-mail</Text>
+            <Text style={style.text}>E-mail</Text>
             <TextInput
                 style={style.input}
                 onChangeText={userEmail => setUser({ ...user, userEmail })}
@@ -46,7 +46,7 @@ export default ({ route, navigation }) => {
                 value={user.userEmail}
             />
 
-            <Text>Avatar</Text>
+            <Text style={style.text}>Avatar</Text>
             <TextInput
                 style={style.input}
                 onChangeText={userAvatar => setUser({ ...user, userAvatar })}
@@ -56,6 +56,7 @@ export default ({ route, navigation }) => {
 
             <Button 
                 title="Salvar"
+                color={"#27b1bf"}
                 onPress={() => {
                     {user.userId ? updateUser() : createUser()}
                     navigation.goBack()
@@ -71,9 +72,15 @@ const style = StyleSheet.create({
     },
     input: {
         height: 40,
-        borderColor: 'black',
-        borderWidth: 1,
+        borderColor: "#27b1bf",
+        borderWidth: 1.5,
         marginBottom: 10,
         padding: 5,
-    }
+        borderRadius: 10
+    },
+    text:{
+        fontSize: 15,
+        color: "#1e8c93",
+        fontWeight: "bold",
+    },
 })
